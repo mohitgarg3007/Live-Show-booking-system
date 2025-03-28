@@ -1,0 +1,20 @@
+Test URL:
+("/register")
+POST "http://localhost:8080/shows/register?name=TMKOC&genre=COMEDY"
+POST "http://localhost:8080/shows/register?name=The Sonu Nigam Live Event&genre=SINGING"
+
+
+@PostMapping("/slots")
+POST "http://localhost:8080/shows/slots?showName=TMKOC&timeSlot=9:00-10:00&capacity=3"
+POST "http://localhost:8080/shows/slots?showName=The Sonu Nigam Live Event&timeSlot=10:00-11:00&capacity=3"
+
+@GetMapping("/all")
+GET "http://localhost:8080/shows/all"
+
+
+@PostMapping("/book")
+POST "http://localhost:8080/shows/book?user=UserA&showName=TMKOC&timeSlot=9:00-10:00&seats=2"
+POST "http://localhost:8080/shows/book?user=UserB&showName=The Sonu Nigam Live Event&timeSlot=10:00-11:00&seats=3"
+
+@DeleteMapping("/cancel")
+DELETE "http://localhost:8080/shows/cancel?bookingId=55d45f85-875b-495f-ad2b-74ca2c14a145"
